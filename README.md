@@ -1,2 +1,0 @@
-# bipharmonic.github.io
-website
