@@ -90,19 +90,17 @@
                         </div>
                         
                         <div class="mbr-section-btn mt-4">
-                            <a id="submitMailtoMain" href="#" class="btn btn-warning display-4" style="padding: 1rem 2.5rem; font-weight: bold; border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Now</a>
+                            <a id="submitMailtoMain" href="mailto:info@bipharmonic.com?subject=BiPharmonic%20Dispatch%20Signup%20Application&body=I%20have%20attached%20my%20required%20documents.%0A%0ABy%20sending%20this%20email%2C%20I%20consented%20to%20agree%20to%20receive%20phone%20calls%20and%20SMS%20messages%20from%20BiPharmonic%20LLC%20regarding%20dispatch%20services%2C%20load%20opportunities%2C%20transportation%20updates%2C%20account%20notifications%2C%20and%20customer%20support.%20Message%20frequency%20may%20vary." class="btn btn-warning display-4" style="padding: 1rem 2.5rem; font-weight: bold; border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Now</a>
                         </div>
 
                         <script>
                         document.getElementById('submitMailtoMain').addEventListener('click', function(e) {
                             var checkbox = document.getElementById('smsConsentMain');
                             if (!checkbox.checked) {
+                                // Block the browser from launching the email app if empty
                                 e.preventDefault();
                                 alert('Please check the box to agree to the terms before proceeding.');
-                                return;
                             }
-                            var consentText = " By sending this email, I consented to agree to receive phone calls and SMS messages from BiPharmonic LLC regarding dispatch services, load opportunities, transportation updates, account notifications, and customer support. Message frequency may vary.";
-                            this.href = "mailto:info@bipharmonic.com?subject=BiPharmonic Dispatch Signup Application&body=I have attached my required documents.%0A%0A" + encodeURIComponent(consentText);
                         });
                         </script>
 
