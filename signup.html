@@ -112,6 +112,14 @@ Here is what you need to sign up:.<br><br>
         </div>
     </div>
 </section>
+	
+<script>
+    function sendSignupEmail() {
+      var subject = encodeURIComponent('BiPharmonic Dispatch Signup Application');
+      var body = encodeURIComponent('I have attached my required documents.\n\nBy sending this email, I consented to agree to receive phone calls and SMS messages from BiPharmonic LLC regarding dispatch services, load opportunities, transportation updates, account notifications, and customer support. Message frequency may vary.');
+      window.location.href = 'mailto:info@bipharmonic.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
 
 <section data-bs-version="5.1" class="social02 cid-vlHhW9VbFU" id="social02-52">
 	
