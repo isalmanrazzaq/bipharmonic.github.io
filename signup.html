@@ -97,12 +97,21 @@ Here is what you need to sign up:.<br><br>
                         <div class="form-check mb-4" style="display: flex; align-items: flex-start;">
                             <input class="form-check-input" type="checkbox" id="smsConsentMain" required="" style="width: 24px; height: 24px; min-width: 24px; margin-right: 15px; margin-top: 3px; cursor: pointer;">
                             <label class="form-check-label display-7" for="smsConsentMain" style="color: white; cursor: pointer; user-select: none;"> 
-                                By checking this box, you agree to receive phone calls and SMS messages from BiPharmonic LLC regarding service, updates, account notifications, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out of text messages and HELP for assistance. Consent is not a condition of purchase. 
+                                By checking this box, you agree to receive phone calls and SMS messages from BiPharmonic LLC regarding dispatch services, load opportunities, transportation updates, account notifications, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out of text messages and HELP for assistance. Consent is not a condition of purchase. 
                             </label>
                         </div>
                         
                         <div class="mbr-section-btn mt-4">
                             <a id="submitMailtoMain" href="mailto:info@bipharmonic.com" onclick="return sendSignupEmail();" class="btn btn-warning display-4" style="padding: 1rem 2.5rem; font-weight: bold; border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Now</a>
+                        </div>
+
+                        <div id="webmailOptions" style="display:none; margin-top: 1.5rem;">
+                            <p class="mbr-text display-7" style="color: #bbbbbb; margin-bottom: 0.75rem;">
+                                No desktop email app? Open a pre-filled draft directly:
+                            </p>
+                            <a id="gmailLink" href="#" target="_blank" rel="noopener" class="btn btn-warning-outline display-4" style="padding: 0.6rem 1.25rem; margin: 0 0.5rem 0.5rem 0; display: inline-block;">Open in Gmail</a>
+                            <a id="outlookLink" href="#" target="_blank" rel="noopener" class="btn btn-warning-outline display-4" style="padding: 0.6rem 1.25rem; margin: 0 0.5rem 0.5rem 0; display: inline-block;">Open in Outlook</a>
+                            <a id="yahooLink" href="#" target="_blank" rel="noopener" class="btn btn-warning-outline display-4" style="padding: 0.6rem 1.25rem; margin: 0 0.5rem 0.5rem 0; display: inline-block;">Open in Yahoo Mail</a>
                         </div>
 
                     </div>
@@ -119,9 +128,32 @@ Here is what you need to sign up:.<br><br>
         alert('Please check the consent box above before continuing.');
         return false;
       }
-      var subject = encodeURIComponent('BiPharmonic Dispatch Signup Application');
-      var body = encodeURIComponent('I have attached my required documents.\n\nBy checking this box, you agree to receive phone calls and SMS messages from 737-232-5522 BiPharmonic LLC regarding dispatch services, load opportunities, transportation updates, account notifications, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out of text messages and HELP for assistance. Consent is not a condition of purchase.');
-      window.location.href = 'mailto:info@bipharmonic.com?subject=' + subject + '&body=' + body;
+
+      var to = 'info@bipharmonic.com';
+      var subject = 'BiPharmonic Dispatch Signup Application';
+      var bodyPlain = 'I have attached my required documents.\n\nBy checking this box, you agree to receive phone calls and SMS messages from 737-232-5522 BiPharmonic LLC regarding dispatch services, load opportunities, transportation updates, account notifications, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out of text messages and HELP for assistance. Consent is not a condition of purchase.';
+
+      // Try the default (desktop) mail app first
+      var mailtoLink = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyPlain);
+      window.location.href = mailtoLink;
+
+      // Also build direct webmail compose links and reveal them, in case there's no desktop mail app
+      document.getElementById('gmailLink').href =
+        'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
+        '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyPlain);
+
+      document.getElementById('outlookLink').href =
+        'https://outlook.office.com/mail/deeplink/compose?to=' + encodeURIComponent(to) +
+        '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyPlain);
+
+      document.getElementById('yahooLink').href =
+        'https://compose.mail.yahoo.com/?to=' + encodeURIComponent(to) +
+        '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyPlain);
+
+      var webmailOptions = document.getElementById('webmailOptions');
+      webmailOptions.style.display = 'block';
+      webmailOptions.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
       return false;
     }
   </script>
@@ -254,7 +286,6 @@ Here is what you need to sign up:.<br><br>
             </div>
         </div>
     </div>
-	</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://bipharmonic.com/" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://biphamonic.com">BiP</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/masonry/masonry.pkgd.min.js"></script>  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
  
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
