@@ -1,0 +1,78 @@
+/* ---------------------------------------------------------------
+   Footer contact / page-link rows (".social02" blocks)
+   Re-aligns the icon + label + text cards so every column in the
+   row matches height, the icon sits centered in a badge, and the
+   text is centered underneath — regardless of label/email length.
+   Scoped to .social02 only, so nothing else on the site is touched.
+------------------------------------------------------------------ */
+
+.social02 .row {
+  row-gap: 1.75rem;
+}
+
+.social02 .item {
+  display: flex;
+}
+
+.social02 .item-wrapper {
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: center;
+  padding: 1.75rem 1.25rem;
+  margin-bottom: 0 !important;
+  border-radius: 12px !important;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.social02 .item-wrapper:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 193, 7, 0.35);
+  transform: translateY(-3px);
+}
+
+.social02 .item-wrapper > a:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.07);
+  margin-bottom: 1rem;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+  transition: background-color 0.2s ease;
+}
+
+.social02 .item-wrapper:hover > a:first-child {
+  background-color: rgba(255, 193, 7, 0.16);
+}
+
+.social02 .mbr-iconfont {
+  font-size: 1.6rem !important;
+  padding-right: 0 !important;
+  color: #ffc107 !important;
+}
+
+.social02 .card-box {
+  width: 100%;
+  text-align: center;
+}
+
+.social02 .card-title {
+  margin-bottom: 0.35rem !important;
+  font-size: 1rem !important;
+}
+
+.social02 .card-text {
+  text-align: center !important;
+  font-size: 0.85rem !important;
+  opacity: 0.85;
+  word-break: break-word;
+  margin-bottom: 0 !important;
+}
