@@ -1,0 +1,15 @@
+/* Homepage hero: same skyscraper photo and wording, stronger typography and a facts strip */
+.cid-vqQWFjaNPx{position:relative}
+.cid-vqQWFjaNPx .mbr-overlay{background:linear-gradient(90deg,rgba(14,14,14,.9) 0%,rgba(14,14,14,.55) 48%,rgba(14,14,14,.12) 100%)!important;opacity:1!important}
+.cid-vqQWFjaNPx .content-wrap{position:relative;z-index:2}
+.cid-vqQWFjaNPx h1{font-size:clamp(3rem,7.4vw,6.25rem)!important;line-height:.98!important;letter-spacing:-.025em;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.cid-vqQWFjaNPx .mbr-text{color:#fff!important;font-size:clamp(1.3rem,2.4vw,1.8rem)!important;display:flex;align-items:center;gap:16px;margin-top:8px}
+.cid-vqQWFjaNPx .mbr-text:before{content:"";width:48px;height:4px;background:#bf0a30;flex:none}
+.cid-vqQWFjaNPx .hero-tag{color:#e9e9ec;font-size:1.15rem;margin:0 0 28px;letter-spacing:.01em}
+.cid-vqQWFjaNPx .hero-facts{position:absolute;left:0;right:0;bottom:0;z-index:2;margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(18,18,18,.82);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.12)}
+.cid-vqQWFjaNPx .hero-facts li{padding:22px 28px;border-left:1px solid rgba(255,255,255,.12)}
+.cid-vqQWFjaNPx .hero-facts li:first-child{border-left:0}
+.cid-vqQWFjaNPx .hero-facts b{display:block;color:#fff;font-size:1.25rem;font-weight:700}
+.cid-vqQWFjaNPx .hero-facts span{color:#cfcfd6;font-size:.95rem}
+@media(max-width:767px){.cid-vqQWFjaNPx .hero-facts{position:relative;grid-template-columns:1fr;margin-top:32px}.cid-vqQWFjaNPx .hero-facts li{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:14px 20px}.cid-vqQWFjaNPx .hero-facts li:first-child{border-top:0}}
+.cid-vqQWFjaNPx .hero-facts,.cid-vqQWFjaNPx .hero-tag{font-family:'Inter Tight',Arial,sans-serif}

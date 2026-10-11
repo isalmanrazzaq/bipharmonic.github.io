@@ -1,0 +1,23 @@
+/* Mobile: left-align text that the template justifies (justified text makes big gaps on narrow screens) */
+@media (max-width:767px){
+.cid-uXFKtY1anf .mbr-section-subtitle,
+.cid-uXFKtY1anf .main-button,
+.cid-uXFKtY1anf .mbr-section-title,
+.cid-uXFKtY1anf .main-button DIV,
+.cid-vlHbPXBIGj .card-text,
+.cid-uXElaa06cy .mbr-text UL,
+.cid-uYjMmz7DLn .mbr-text,
+.cid-vlHjJ8XBYh .card-text,
+.cid-uXzYqtiPju .mbr-text,
+.cid-uXzYqtiPju .mbr-section-title,
+.cid-vlHcPvhDot .card-text,
+.cid-vlHmhJiVME .mbr-text,
+.cid-vlHmhJiVME .mbr-section-title,
+.cid-vlHmtbwcmW .mbr-section-title,
+.cid-vlHl8wMFI6 .card-text,
+.cid-vlHhW9VbFU .card-text,
+.cid-vqKYkBIQhB .card-text,
+.cid-vqRywDDsgr .card-text{text-align:left!important}
+.cid-uXzYqtiPju .mbr-text{line-height:1.65}
+.cid-uXzYqtiPju .mbr-section-title{line-height:1.1}
+}

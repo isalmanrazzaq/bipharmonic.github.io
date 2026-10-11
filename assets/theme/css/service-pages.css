@@ -1,0 +1,35 @@
+/* Truck-type service pages */
+.bpc .phero{padding-top:150px;padding-bottom:56px;max-width:1180px}
+.bpc h1{font-size:clamp(2.3rem,5.6vw,4rem);font-weight:800;line-height:1.03;letter-spacing:-.02em;color:#fff;margin:0 0 18px;max-width:18ch}
+.bpc .lede{font-size:1.2rem;color:#d7d7de;max-width:44rem;margin:0 0 28px}
+.bpc .pcta{display:flex;flex-wrap:wrap;gap:12px}
+.bpc .call2{background:var(--red);color:#fff!important;padding:15px 26px;border-radius:12px;font-weight:700}
+.bpc .call2:hover{background:#9d0828}
+.bpc .ghost{border:2px solid var(--gold);color:var(--gold);padding:13px 24px;border-radius:12px;font-weight:700}
+.bpc .ghost:hover{background:var(--red);border-color:var(--red);color:#fff}
+.bpc .sec h2{margin-bottom:22px}
+.bpc .get{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.bpc .get li{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.bpc .get svg{color:var(--gold);stroke-width:2.4;margin-top:2px}
+.bpc .steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bpc .steps li{counter-increment:s;padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:14px;color:var(--mut)}
+.bpc .steps li:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;margin-bottom:12px}
+.bpc .steps b{display:block;color:#fff;margin-bottom:4px;font-size:1.1rem}
+.bpc .plans.one{grid-template-columns:minmax(0,420px)}
+.bpc .ratebox{padding:26px 28px;background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--red);border-radius:14px}
+.bpc .ratebox h3{margin:0 0 8px;color:#fff;font-size:1.3rem}
+.bpc .ratebox p{margin:0;font-size:1.1rem;color:#e6e6ea}
+.bpc .ratebox a,.bpc .faq a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.bpc .faq{display:grid;gap:10px}
+.bpc .faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:0 20px}
+.bpc .faq details[open]{border-color:var(--gold)}
+.bpc .faq summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:1.05rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.bpc .faq summary::-webkit-details-marker{display:none}
+.bpc .faq summary:after{content:"+";color:var(--gold);font-size:1.4rem;line-height:1}
+.bpc .faq details[open] summary:after{content:"\2212"}
+.bpc .faq p{margin:0 0 18px;color:#cfcfd6;max-width:46rem}
+.bpc .more{display:flex;flex-wrap:wrap;gap:10px}
+.bpc .more a{padding:12px 20px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-weight:600;color:#fff}
+.bpc .more a:hover{border-color:var(--gold)}
+.bpc .links.six{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.bpc .get,.bpc .steps,.bpc .links.six{grid-template-columns:1fr}.bpc .phero{padding-top:120px}}
